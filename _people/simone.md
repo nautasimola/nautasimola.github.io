@@ -2,7 +2,7 @@
 layout: cv
 permalink: /cv/
 title: Simone Latini
-description: Assistant Professor Tenure Track - DTU Physics
+description: Associate Professor - DTU Physics
 img: assets/img/simonepic.png
 importance: 1
 category: toshow
