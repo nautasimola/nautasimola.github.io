@@ -2,10 +2,10 @@
 layout: cv
 permalink: /cv/
 title: Luigi Brusaferri
-description: Master Student - DTU Physics
+description: Doctoral Student - DTU Physics
 img: assets/img/luigipic.png
-importance: 4
+importance: 3
 category: toshow
-redirect:
+redirect: https://orbit.dtu.dk/en/persons/luigi-brusaferri/
 ---
 
