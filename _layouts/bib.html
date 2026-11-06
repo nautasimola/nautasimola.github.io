@@ -2,11 +2,19 @@
 ---
 {%- assign limit = site.max_author_limit | default: 100 -%}
 {%- assign n_auth = entry.author_array | size -%}
+{%- assign link = entry.html -%}
 <div class="pub" id="{{ entry.key }}">
-  {%- if entry.abbr %}<span class="pub-venue">{{ entry.abbr }}</span>{% endif %}
+  <a class="pub-thumb{% unless entry.preview %} pub-thumb--empty{% endunless %}"{% if link %} href="{{ link }}"{% endif %} tabindex="-1" aria-hidden="true">
+    {%- if entry.preview %}
+    <img src="{{ entry.preview | prepend: '/assets/img/publications/' | relative_url }}" alt="" loading="lazy">
+    {%- else %}
+    <span>{{ entry.abbr | default: entry.year }}</span>
+    {%- endif %}
+  </a>
   <div class="pub-main">
-    {%- if entry.html %}
-    <a class="pub-title" href="{{ entry.html }}">{{ entry.title }}</a>
+    {%- if entry.abbr %}<span class="pub-venue">{{ entry.abbr }}</span>{% endif %}
+    {%- if link %}
+    <a class="pub-title" href="{{ link }}">{{ entry.title }}</a>
     {%- else %}
     <span class="pub-title">{{ entry.title }}</span>
     {%- endif %}
@@ -26,6 +34,7 @@
       {%- if entry.pages %}, {{ entry.pages }}{% endif -%}
       {%- if entry.year %} ({{ entry.year }}){% endif -%}
     </div>
+    {%- if entry.summary %}<p class="pub-summary">{{ entry.summary }}</p>{% endif %}
     <div class="pub-links">
       {%- if entry.html and entry.arxiv == nil %}<a href="{{ entry.html }}">Article</a>{% endif %}
       {%- if entry.arxiv %}<a href="https://arxiv.org/abs/{{ entry.arxiv }}">arXiv</a>{% endif %}
