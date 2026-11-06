@@ -1,7 +1,7 @@
 ---
 title: Tijan Prijon
 description: Doctoral Student - DTU Physics, employed at the Jožef Stefan Institute, Slovenia
-img:
+img: assets/img/people/tijan.jpg
 importance: 3
 category: toshow
 redirect:

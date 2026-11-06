@@ -1,7 +1,7 @@
 ---
 title: Matteo Castagnola
 description: Postdoctoral Researcher - DTU Physics
-img:
+img: assets/img/people/matteo.jpg
 importance: 2
 category: toshow
 redirect:
