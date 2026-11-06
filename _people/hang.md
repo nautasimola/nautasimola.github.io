@@ -1,8 +1,6 @@
 ---
-layout: cv
-permalink: /cv/
 title: Hang Liu
-description: Post Doctoral Researcher - Max Planck Institute in Hamburg in Prof. Rubio's group
+description: Postdoctoral Researcher - MPSD Hamburg, co-supervised in Prof. Rubio's group
 img: assets/img/hangpic.png
 importance: 2
 category: toshow

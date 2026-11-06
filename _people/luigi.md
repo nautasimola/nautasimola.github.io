@@ -1,6 +1,4 @@
 ---
-layout: cv
-permalink: /cv/
 title: Luigi Brusaferri
 description: Doctoral Student - DTU Physics
 img: assets/img/luigipic.png

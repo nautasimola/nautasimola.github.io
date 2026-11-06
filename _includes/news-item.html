@@ -1,0 +1,9 @@
+{%- assign n = include.item -%}
+<article class="news-card{% if n.image %} has-img{% endif %}">
+  {%- if n.image %}<div class="news-img"><img src="{{ n.image | relative_url }}" alt="" loading="lazy"></div>{% endif %}
+  <div class="news-body">
+    <time datetime="{{ n.date | date_to_xmlschema }}">{{ n.date | date: "%B %Y" }}</time>
+    {%- if n.title %}<h3>{{ n.title }}</h3>{% endif %}
+    <div class="news-text">{{ n.content | markdownify }}</div>
+  </div>
+</article>

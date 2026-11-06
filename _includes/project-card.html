@@ -1,0 +1,9 @@
+{%- assign pr = include.project -%}
+<a class="project-card" href="{{ pr.url | relative_url }}">
+  <div class="project-img">{% if pr.img %}<img src="{{ pr.img | relative_url }}" alt="" loading="lazy">{% endif %}</div>
+  <div class="project-body">
+    <span class="project-num">{% if include.index < 10 %}0{% endif %}{{ include.index }}</span>
+    <h3>{{ pr.title }}</h3>
+    <p>{{ pr.description }}</p>
+  </div>
+</a>

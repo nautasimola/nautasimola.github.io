@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Time Resolved Spectroscopies
 description: Following non-equilibrium dynamics with time resolved spectroscopies
 img: assets/img/Pump_Probe_Simulations_10_13.jpg

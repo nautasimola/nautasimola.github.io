@@ -1,35 +1,45 @@
 ---
 layout: default
 ---
-<!-- _layouts/cv.html -->
-        <div class="post">
-
-          <header class="post-header">
-            <h1 class="post-title">{{ page.title }} {% if page.cv_pdf %}<a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" target="_blank" rel="noopener noreferrer" class="float-right"><i class="fas fa-file-pdf"></i></a>{% endif %}</h1>
-            <p class="post-description">{{ page.description }}</p>
-          </header>
-
-          <article>
-            <div class="cv">
-              {% for entry in site.data.cv %}
-                <div class="card mt-3 p-3">
-                  <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
-                  <div>
-                  {% if entry.type == "list" %}
-                    {% include cv/list.html %}
-                  {% elsif entry.type == "map" %}
-                    {% include cv/map.html %}
-                  {% elsif entry.type == "nested_list" %}
-                    {% include cv/nested_list.html %}
-                  {% elsif entry.type == "time_table" %}
-                   {% include cv/time_table.html %}
-                  {% else %}
-                    {{ entry.contents }}
-                  {% endif %}
-                  </div>
-                </div>
-              {% endfor %}
-              </div>
-          </article>
-
-        </div>
+{%- assign person = site.people | where: "cv", true | first %}
+<section class="page-hero">
+  <div class="wrap cv-hero">
+    {%- if person.img %}<img class="cv-photo" src="{{ person.img | relative_url }}" alt="{{ person.title }}">{% endif %}
+    <div>
+      <p class="eyebrow"><a href="{{ '/people/' | relative_url }}">← People</a></p>
+      <h1>{{ page.title }}</h1>
+      {%- if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
+      {%- if page.cv_pdf %}<p><a class="btn" href="{{ page.cv_pdf | prepend: '/assets/pdf/' | relative_url }}">Download CV (PDF)</a></p>{% endif %}
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap cv">
+    {%- for entry in site.data.cv %}
+    <div class="cv-block">
+      <h2>{{ entry.title }}</h2>
+      {%- if entry.type == "map" %}
+      <dl class="cv-map">
+        {%- for item in entry.contents %}<dt>{{ item.name }}</dt><dd>{{ item.value }}</dd>{% endfor %}
+      </dl>
+      {%- elsif entry.type == "time_table" %}
+      <ul class="cv-timeline">
+        {%- for item in entry.contents %}
+        <li>
+          <span class="cv-year">{{ item.year }}</span>
+          <div>
+            {%- if item.title %}<strong>{{ item.title }}</strong>{% endif %}
+            {%- if item.institution %}<div class="muted">{{ item.institution }}</div>{% endif %}
+            {%- if item.description %}<div class="cv-desc">{{ item.description }}</div>{% endif %}
+          </div>
+        </li>
+        {%- endfor %}
+      </ul>
+      {%- elsif entry.type == "list" %}
+      <ul>{% for item in entry.contents %}<li>{{ item }}</li>{% endfor %}</ul>
+      {%- endif %}
+    </div>
+    {%- endfor %}
+    {{ content }}
+  </div>
+</section>

@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Quantum Materials
 description: Collective Quantum Phases of Matter
 img: assets/img/TNS_laser.png

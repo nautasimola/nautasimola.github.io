@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<section class="page-hero project-hero">
+  <div class="wrap project-hero-grid">
+    <div>
+      <p class="eyebrow"><a href="{{ '/projects/' | relative_url }}">← Research</a></p>
+      <h1>{{ page.title }}</h1>
+      {%- if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
+    </div>
+    {%- if page.img %}
+    <img class="project-hero-img" src="{{ page.img | relative_url }}" alt="">
+    {%- endif %}
+  </div>
+</section>
+<section class="section">
+  <div class="wrap prose">
+    {{ content }}
+  </div>
+</section>

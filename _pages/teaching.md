@@ -2,17 +2,30 @@
 layout: page
 permalink: /teaching/
 title: Teaching
-description: Materials for courses (Under Construction)
-nav: true
-nav_order: 5
+eyebrow: Courses
+description: Courses taught at the Technical University of Denmark.
 ---
 
-[comment]: <> (For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course. Organize your courses by years, topics, or universities, however you like!)
+<div class="course-list">
+  <a class="course" href="https://kurser.dtu.dk/course/10104">
+    <span class="course-code">10104</span>
+    <span class="course-title">Introduction to Quantum Mechanics</span>
+    <span class="course-level">BSc · course responsible · 2026–</span>
+  </a>
+  <a class="course" href="https://kurser.dtu.dk/course/10306">
+    <span class="course-code">10306</span>
+    <span class="course-title">Theory of 2D Materials and Strong Light–Matter Interaction</span>
+    <span class="course-level">MSc · new course · 2025–</span>
+  </a>
+  <a class="course" href="https://kurser.dtu.dk/course/10319">
+    <span class="course-code">10319</span>
+    <span class="course-title">Advanced Solid State Physics</span>
+    <span class="course-level">MSc · shared · 2024–</span>
+  </a>
+</div>
 
-## Current Courses on Offer
+## Previously
 
-- *[Theory of 2D Materials and Strong Light-Matter Interaction](https://kurser.dtu.dk/course/2024-2025/10306?menulanguage=en)*, Master-level course at the Technical University of Denmark.
-
-- *[Advanced Solid State Physics](https://kurser.dtu.dk/course/2024-2025/10319?menulanguage=en)*, Master-level course at the Technical University of Denmark.
-
-- *[Physics Polytechical Foundations](https://kurser.dtu.dk/course/10063)*, course for Bachelor in Engineering at the Technical University of Denmark.
+- *[Physics: Polytechnical Foundations](https://kurser.dtu.dk/course/10063)*, BSc in General Engineering (2024–2025)
+- Guest lectures in *Advanced Quantum Mechanics* (MSc) and *Nano3*
+- Tutor for BSc students in General Engineering

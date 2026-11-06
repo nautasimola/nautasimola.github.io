@@ -1,8 +1,6 @@
 ---
-layout: cv
-permalink: /cv/
 title: Mikkel Have Eriksen
-description: Post Doctoral Researcher - DTU Physics
+description: Postdoctoral Researcher - DTU Physics
 img: assets/img/mikkelpic.png
 importance: 2
 category: toshow

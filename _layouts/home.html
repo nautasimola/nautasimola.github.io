@@ -1,0 +1,112 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="wrap hero-copy">
+    <p class="eyebrow">{{ page.hero_eyebrow }}</p>
+    <h1>{{ page.hero_title }}</h1>
+    <p class="lead">{{ page.hero_text }}</p>
+    <div class="btn-row">
+      <a class="btn" href="{{ '/projects/' | relative_url }}">Explore our research</a>
+      <a class="btn btn--ghost" href="{{ '/join/' | relative_url }}">Join the group</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <img class="hero-banner" src="{{ '/assets/img/banner.png' | relative_url }}" alt="Illustration of a crystal lattice interacting with light">
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap about-grid">
+    <div>
+      <p class="eyebrow">About the group</p>
+      <h2>Light as a tool to tailor materials</h2>
+    </div>
+    <div class="about-text">
+      {{ content }}
+      <ul class="topic-tags">
+        {%- for t in page.topics %}
+        <li>{{ t }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="wrap">
+    <figure class="about-figure">
+      <img src="{{ '/assets/img/about_QP.png' | relative_url }}" alt="Overview of our research: excitons, two-dimensional materials, materials in optical cavities, and hybrid photon–phonon–exciton states">
+    </figure>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Research</p>
+        <h2>What we work on</h2>
+      </div>
+      <a class="link-arrow" href="{{ '/projects/' | relative_url }}">All research topics</a>
+    </div>
+    <div class="project-grid">
+      {%- assign projects = site.projects | where: "category", "work" | sort: "importance" %}
+      {%- for pr in projects %}
+        {% include project-card.html project=pr index=forloop.index %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap news-pubs">
+    <div>
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">News</p>
+          <h2>Latest</h2>
+        </div>
+        <a class="link-arrow" href="{{ '/news/' | relative_url }}">All news</a>
+      </div>
+      <div class="news-compact">
+        {%- assign news = site.news | sort: "date" | reverse %}
+        {%- for item in news limit: 4 %}
+        <article class="news-row">
+          <time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%b %Y" }}</time>
+          <div>
+            <h3>{{ item.title }}</h3>
+            <div class="news-text">{{ item.content | markdownify }}</div>
+          </div>
+        </article>
+        {%- endfor %}
+      </div>
+    </div>
+    <div>
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Publications</p>
+          <h2>Selected papers</h2>
+        </div>
+        <a class="link-arrow" href="{{ '/publications/' | relative_url }}">Full list</a>
+      </div>
+      <div class="publications publications--compact">
+        {% bibliography -f papers -q @*[selected=true]* %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--join">
+  <div class="wrap">
+    <div class="join-panel">
+      {% include hero-art.html %}
+      <div class="join-content">
+        <p class="eyebrow">Join us</p>
+        <h2>Open positions</h2>
+        <p>We regularly look for motivated PhD students and postdocs through our Villum Young Investigator project and the SPARKLE Marie Skłodowska-Curie doctoral network.</p>
+        <div class="btn-row">
+          <a class="btn" href="{{ '/join/' | relative_url }}">How to join</a>
+          <a class="btn btn--ghost" href="https://www.sparkle-dn.eu/">SPARKLE network</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

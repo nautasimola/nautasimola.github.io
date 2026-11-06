@@ -1,0 +1,19 @@
+{%- assign p = include.person -%}
+{%- assign role = p.description | split: " - " -%}
+{%- assign href = nil -%}
+{%- if p.redirect contains "://" %}{% assign href = p.redirect %}{% elsif p.redirect != blank %}{% assign href = p.redirect | relative_url %}{% endif -%}
+{%- assign names = p.title | split: " " -%}
+<{% if href %}a href="{{ href }}"{% else %}div{% endif %} class="person-card">
+  <div class="person-photo">
+    {%- if p.img != blank %}
+    <img src="{{ p.img | relative_url }}" alt="{{ p.title }}" loading="lazy">
+    {%- else %}
+    <span class="person-initials" aria-hidden="true">{{ names.first | slice: 0 }}{{ names.last | slice: 0 }}</span>
+    {%- endif %}
+  </div>
+  <div class="person-body">
+    <h3>{{ p.title }}</h3>
+    <p class="person-role">{{ role[0] }}</p>
+    {%- if role[1] %}<p class="person-aff">{{ role[1] }}</p>{% endif %}
+  </div>
+</{% if href %}a{% else %}div{% endif %}>

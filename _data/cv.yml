@@ -1,80 +1,91 @@
-- title: General Information
-  type: map
+- title: Academic positions
+  type: time_table
   contents:
-    - name: Full Name
-      value: Simone Latini
-    - name: Date of Birth
-      value: 23rd Sept. 1989
-    - name: Languages
-      value: English, Italian
+    - year: 2025 – present
+      title: Associate Professor and group leader
+      institution: Department of Physics, Technical University of Denmark (DTU)
+    - year: 2026 – present
+      title: Max Planck Partner Group Leader
+      institution: Max Planck Institute for the Structure and Dynamics of Matter (MPSD), Hamburg
+    - year: 2022 – 2025
+      title: Assistant Professor (tenure track)
+      institution: Department of Physics, DTU
+    - year: 2021 – 2022
+      title: Group Leader
+      institution: MPSD, Hamburg
+    - year: 2017 – 2020
+      title: Postdoctoral Researcher and Alexander von Humboldt Fellow
+      institution: "MPSD, Hamburg. Host: Prof. Angel Rubio"
+    - year: 2016
+      title: Postdoctoral Researcher
+      institution: "Department of Physics, DTU. Host: Prof. Kristian S. Thygesen"
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD in Physics
-      institution: Technical University of Denmark, Kongens Lyngby, Denmark
-      year: 2013-2016
-      description: >
-        Title : "<a href="https://orbit.dtu.dk/en/publications/excitons-in-van-der-waals-heterostructures-a-theoretical-study">Excitons in van der Waals Heterostructures: A theoretical study"</a> <br>
-        Thesis advisor : Prof. Kristian S. Thygesen
-    - title:  Master in Science and Technology of Materials
-      institution: University of Rome Tor Vergata, Italy
-      year: 2011-2013
-      description: >
-        Title : "Following Electrons in Real Time: Speeding up Nonequilibrium Green’s Functions calculations for Ultrafast Charge Transfers" <br>
-        Thesis advisor : Prof. Gianluca Stefanucci
-    - title: Bachelor in Material Science
-      institution: University of Rome Tor Vergata, Italy
-      year: 2008-2011
-      description: >
-        Title : "Quantum Dots Lateral Ordering Via Multilayer Stacking" <br>
-        Thesis advisor : Prof. Fabrizio Arciprete and Ernesto Placidi
-
-- title: Experience
-  type: time_table
-  contents:
-    - title: Assistant Professor of Physics (tenure track)
+    - year: 2016
+      title: PhD in Physics
       institution: Technical University of Denmark
-      year: 2022 - now
-    - title: Group Leader
-      institution: Max-Planck Institute for the Structure and Dynamics of Matter
-      year: 2021 - 2022
-    - title: Post-Doctoral Researcher
-      institution: Max-Planck Institute for the Structure and Dynamics of Matter
-      year: 2017-2021
+      description: >
+        Thesis: <em>Excitons in van der Waals Heterostructures: A theoretical study</em>. Advisor: Prof. Kristian S. Thygesen
+    - year: 2013
+      title: MSc in Materials Science and Technology
+      institution: University of Rome Tor Vergata, Italy
+      description: >
+        Thesis: <em>Following Electrons in Real Time: Speeding up Nonequilibrium Green’s Functions calculations for Ultrafast Charge Transfers</em>. Advisor: Prof. Gianluca Stefanucci
+    - year: 2011
+      title: BSc in Materials Science
+      institution: University of Rome Tor Vergata, Italy
+      description: >
+        Thesis: <em>Quantum Dots Lateral Ordering Via Multilayer Stacking</em>. Advisors: Prof. Fabrizio Arciprete and Dr. Ernesto Placidi
 
-- title: Open Source Projects
+- title: Grants and fellowships
   type: time_table
   contents:
-    - title: <a href="https://gitlab.com/gpaw/gpaw">GPAW</a>
-      year: 2013-now
-      description: A density functional theory code written in python.
-    - title: <a href="https://gitlab.com/octopus-code">Octopus</a>
-      year: 2017-now
-      description: A time-dependent density functional theory code written in fortran.
+    - year: 2026 – present
+      title: Max Planck Partner Group
+      institution: Max Planck Society (with MPSD Hamburg)
+      description: Ab initio methods for matter in engineered photonic environments.
+    - year: 2025 – present
+      title: Villum Young Investigator
+      institution: Villum Fonden
+      description: QaLM – Quantum light–matter hybrids via spatially designed photons.
+    - year: 2025 – present
+      title: MSCA Doctoral Network SPARKLE (coordinator)
+      institution: European Commission
+      description: Scientific training programme for advanced polaritonics, training 14 PhD students across Europe.
+    - year: 2025 – present
+      title: Novo Nordisk Foundation Synergy Exploratory Grant (coordinator)
+      institution: Novo Nordisk Foundation
+      description: Quantum-enriched Raman spectroscopy for biomedical diagnostics.
+    - year: 2018 – 2020
+      title: Humboldt Research Fellowship for Postdoctoral Researchers
+      institution: Alexander von Humboldt Foundation
 
-- title: Honors and Awards
+- title: Awards and honours
   type: time_table
   contents:
-    - year: 2018
-      institution: Research Fellowship from the Alexander von Humboldt foundation
     - year: 2017
-      institution: Best PhD thesis Prize from the Danish Academy for Natural Sciences
+      title: Best PhD Thesis Prize in the natural sciences
+      institution: Danish Academy of Natural Sciences
+    - year: 2008 – 2013
+      title: Scholarship “Deserving Students”
+      institution: University of Rome Tor Vergata
     - year: 2008
-      institution: Freshman Student Prize from the University of Rome Tor Vergata
+      title: Freshman Student Prize (ranked first)
+      institution: University of Rome Tor Vergata
 
-- title: Other Interests
+- title: Open source
+  type: time_table
+  contents:
+    - year: 2013 – now
+      title: <a href="https://gitlab.com/gpaw/gpaw">GPAW</a>
+      description: Co-developer of the open-source electronic-structure code.
+    - year: 2017 – now
+      title: <a href="https://gitlab.com/octopus-code">Octopus</a> and Quantum ESPRESSO
+      description: QEDFT functionals implemented in open-source codes.
+
+- title: Other interests
   type: list
   contents:
     - Triathlon, Skiing, Sailing and anything related to sports!
-    - <div class="row mt-3">
-          <div class="col-sm-2"></div>
-          <div class="col-sm-8">
-              <img src="../assets/img/triathlon.jpg" class="img-fluid rounded z-depth-1">
-          </div>
-          <div class="col-sm-2"></div>
-      </div>
-      <div class="caption">
-          A triathlon collage.
-      </div>
-

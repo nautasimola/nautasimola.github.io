@@ -1,7 +1,5 @@
 ---
-layout: post
-date: 2022-12-05 09:01:00-0400
-inline: true
+title: Starting at DTU
+date: 2022-12-05
 ---
-
-Glad to start as a tenure track Assistant Professor at the Technical university of Denmark!
+Glad to start as a tenure-track Assistant Professor at the Technical University of Denmark!

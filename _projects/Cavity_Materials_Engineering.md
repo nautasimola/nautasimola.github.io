@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Cavity Materials Engineering
 description: Strong-Light matter coupling in Optical Cavities for Material Control
 img: assets/img/Virtual_Fluctuations_10_13.jpg
