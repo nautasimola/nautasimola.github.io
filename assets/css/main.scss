@@ -329,6 +329,8 @@ p.pub-links { gap: 10px; margin-bottom: 1rem; }
 .alumni-list li { display: flex; flex-direction: column; padding: 12px 0; border-bottom: 1px solid var(--line); }
 .alumni-list strong { font-family: var(--serif); font-size: 1.2rem; font-weight: 500; color: var(--ink); }
 .alumni-list span { color: var(--muted); font-size: .9rem; }
+.alumni-list a { text-decoration: none; }
+.alumni-list a:hover strong { color: var(--purple); }
 
 .about-figure { margin: 64px auto 0; max-width: 1000px; }
 .about-figure img { width: 100%; height: auto; }

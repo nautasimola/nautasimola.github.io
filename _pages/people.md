@@ -31,7 +31,7 @@ groups:
 <h2 class="group-title">Alumni</h2>
 <ul class="alumni-list">
   {%- for a in alumni %}
-  <li><strong>{{ a.title }}</strong><span>{{ a.description }}</span></li>
+  <li>{% if a.redirect != blank %}<a href="{{ a.redirect }}"><strong>{{ a.title }}</strong></a>{% else %}<strong>{{ a.title }}</strong>{% endif %}<span>{{ a.description }}</span></li>
   {%- endfor %}
 </ul>
 {%- endif %}
